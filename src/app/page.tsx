@@ -1,13 +1,14 @@
 
-"use client"
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Descripcion } from"app/components/home/Descripcion"
+import{Hero} from"app/components/home/Hero"
+import { MianProducts } from "app/components/home/MainProducts"
+
 
 export default function Home() {
-  console.log('Hola mundo pagina de inicio ')
+  
   return (
-    <main className={styles.main}>
-    <h1>Hola Mundo </h1>
+  <main> 
+    <Descripcion/>
     </main>
   );
 }
