@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import Image from 'next/image';
 import classNames from 'classnames/bind';
 import{useState} from 'react';
@@ -11,8 +11,8 @@ export const Descripcion = () =>{
     const handleChick= () =>  setBorder (!hasBodder);
 
 const cx = classNames.bind(styles);
-    const buttonStyles = cx('button',{
-    'button--border':hasBodder
+    const buttonStyles = cx('Description__button',{
+    'Description__button__border':hasBodder
 })
 
     console.log(buttonStyles);
@@ -21,22 +21,20 @@ const cx = classNames.bind(styles);
 
     <section className={styles.Description}>
       <button onClick={handleChick} className={buttonStyles}>
-        <div className={styles.Description__text}></div>
+        <div className={styles.Description__imageContainer}>
         <Image
          src="/images/description.jpeg" 
          alt="Products marketplace"
          fill
-         placeholder='blur'
-         blurDataURL='placeholder_IMAGE'
          />
-       
-        <h2>Bring the future today</h2>
-<p>Future World: Your Geteway to Tomorrow's Tech! Dive into a world of cutting-edge gadgets and gear.
+         </div>
+         </button>
+         <div className={styles.Description__text}>
+            <h2>Bring the future today</h2>
+            <p>Future World: Your Geteway to Tomorrow's Tech! Dive into a world of cutting-edge gadgets and gear.
 Stay ahead of the curve and redefine ypur digital lifestyle with us.</p>
-<div className={styles.Description__text}>
-        
-   </div>
-   </button>
+       </div>
+
     </section>
 )
 }

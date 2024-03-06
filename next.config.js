@@ -2,14 +2,13 @@
 
 const path = require('path')
 
-const nextConfig = {};
+const nextConfig = {
 
-module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/sass')],
 
-    prepemdData:'@import "main.sass"'
+    prependData:'@import "main.sass"'
   },
 }
 
- module.export = nextConfig;
+ module.exports = nextConfig;
