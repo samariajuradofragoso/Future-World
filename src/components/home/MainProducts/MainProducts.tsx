@@ -1,16 +1,24 @@
-"use client"
 
-export const MianProducts = () =>{
+const getProducts = async () => {
+    try {
+    const response = await fetch(`${process.env.SHOPIFY_HOSTNAME}admin/api/2024-01/products/11235813213455.json `, {
+        headers: new Headers({
+            'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ""
+        })
+    })
+    const { products } = await response.json()
+    return products
+  } catch (error) {
+    console.log(error)
+  }
+}
 
-    console log( "veriable de entorno " process .env.NEXT_PUBLIC_HOPIFY_HOSTNAME)
-
-    return(
-        <section>
-            <h1>MianProducts</h1>
-        </section>
+export const MainProducts = async () => {
+    const products = await getProducts()
+    
+    return (
+      <section>
+        <h1> Main Products</h1>
+      </section>
     )
     }
-
-function log(arg0: string, NEXT_PUBLIC_HOPIFY_HOSTNAME: string | undefined) {
-    throw new Error("Function not implemented.")
-}
