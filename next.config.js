@@ -9,7 +9,7 @@ const nextConfig = {
 
     prependData:'@import "main.sass"'
   },
-  Image: {
+  image: {
     remotePatterns: [
       {
       hostname:'cdn.shopify.com',
