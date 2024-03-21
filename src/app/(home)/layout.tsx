@@ -1,14 +1,12 @@
 import { Hero } from "app/components/home/Hero"
-import { Descripcion } from "app/components/home/Descripcion"
+import { Description } from "app/components/home/Description"
 
-export default function HomeLayout({ children }: {children: React.ReactNode }){
-
-    return(
-        <div>
-
-            <Hero/>
-            <Descripcion/>
-            {children}
-        </div>
-    )
+export default function HomeLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div>
+      <Hero />
+      <Description />
+      {children}
+    </div>
+  )
 }
