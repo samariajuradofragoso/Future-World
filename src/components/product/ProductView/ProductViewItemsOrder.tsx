@@ -47,7 +47,8 @@ export const ProductViewItemsOrder = ({ maxQuantity, product }: ProductViewItems
       </div>
       <form
         onSubmit={handleAddToCart}
-        className={styles.ProductViewItemsOrder__form} >
+        className={styles.ProductViewItemsOrder__form}
+      >
         <button
           className={styles.ProductViewItemsOrder__submit}
           type="submit"
